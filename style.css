@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Helvetica;
+}
+
+div#line {
+    width: 2px;
+    height: 20px;
+    background-color: #4f4f4f;
+    animation: line 1s forwards;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes line {
+    from {height: 0}
+    to {height: 100px}
+}
+
+div.container {
+    position: relative;
+    width: 80%;
+    margin: 3em auto;
+}
+
+div.text {
+    margin-top: 150px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: opa 1s 1.5s forwards;
+}
+
+@keyframes opa {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+h1 span {
+    font-size: .3em;
+    font-weight: 100;
+    border: 1px solid;
+    padding: .5em 1em;
+    border-radius: 100px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+h1 span:hover {
+    background: white;
+    color: black;
+}
+
+div.team div {
+    width: 200px;
+    height: 200px;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    padding-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-transform: capitalize;
+    margin: 1em;
+}
+
+div.team {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+div.copy {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    color: #dfdfdf;
+    font-weight: 100;
+    padding: 1em;
+    text-align: right;
+    padding-left: 10%;
+    text-transform: lowercase;
+}
+
